@@ -1,0 +1,11 @@
+version: "3.8"
+
+services:
+  react-app:
+    image: username/react-app:latest
+    ports:
+      - "3000:80"
+    deploy:
+      replicas: 3
+      restart_policy:
+        condition: on-failure
